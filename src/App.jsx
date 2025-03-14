@@ -6,70 +6,74 @@ function App() {
   const [points, setPoints] = useState(0);
 
   const questionsList = [
+    // Easy Questions
     {
       question:
-        "What was the original name of the planet that became Tatooine?",
-      options: ["Lothal", "Tatooine Prime", "Arkanis", "Tund"],
-      answer: "Arkanis",
-    },
-    {
-      question: "What species is Jar Jar Binks?",
-      options: ["Gungan", "Chagrian", "Togruta", "Rodian"],
-      answer: "Gungan",
-    },
-    {
-      question: "In the Expanded Universe, who was the first Sith Lord?",
-      options: ["Darth Bane", "Darth Revan", "Darth Nihilus", "Darth Vitiate"],
-      answer: "Darth Vitiate",
-    },
-    {
-      question: "Which planet was the birthplace of Darth Maul?",
-      options: ["Dathomir", "Mustafar", "Sithis", "Korriban"],
-      answer: "Dathomir",
+        "What is the name of the desert planet where Luke Skywalker grew up?",
+      options: ["Tatooine", "Jakku", "Hoth", "Naboo"],
+      answer: "Tatooine",
     },
     {
       question:
-        "What was the name of the starship used by the rebels in the Battle of Yavin, before the Millennium Falcon?",
-      options: ["Home One", "Profundity", "Tantive IV", "Ghost"],
-      answer: "Tantive IV",
+        "Who was the Sith Lord who killed Qui-Gon Jinn in The Phantom Menace?",
+      options: ["Darth Vader", "Darth Maul", "Darth Sidious", "Count Dooku"],
+      answer: "Darth Maul",
     },
     {
-      question: "What species was Supreme Leader Snoke?",
-      options: ["Hylian", "Human", "Zabrak", "Unknown"],
-      answer: "Unknown",
+      question: "What color is Yoda’s lightsaber in the prequel trilogy?",
+      options: ["Blue", "Purple", "Green", "Red"],
+      answer: "Green",
+    },
+
+    // Medium Questions
+    {
+      question: "What is the name of the Wookiee homeworld?",
+      options: ["Endor", "Kashyyyk", "Yavin 4", "Dantooine"],
+      answer: "Kashyyyk",
     },
     {
       question:
-        "What was the name of the Sith homeworld during the era of the Old Republic?",
-      options: ["Moraband", "Korriban", "Ziost", "Dromund Kaas"],
-      answer: "Korriban",
+        "In The Empire Strikes Back, who says, 'I am not a committee!'?",
+      options: ["Leia Organa", "Han Solo", "Lando Calrissian", "Mon Mothma"],
+      answer: "Leia Organa",
     },
     {
-      question: "What was the name of the first lightsaber ever created?",
+      question: "What type of ship is the Millennium Falcon?",
+      options: ["X-wing", "YT-1300 freighter", "TIE Fighter", "Star Destroyer"],
+      answer: "YT-1300 freighter",
+    },
+
+    // Hard Questions
+    {
+      question:
+        "In The Clone Wars series, what is the name of the Mandalorian extremist group led by Pre Vizsla?",
       options: [
-        "The Blade of the Sith",
-        "The First Blade",
-        "The Dark Saber",
-        "The Darksaber",
+        "Death Watch",
+        "Shadow Collective",
+        "Night Owls",
+        "True Mandalorians",
       ],
-      answer: "The Darksaber",
+      answer: "Death Watch",
     },
     {
       question:
-        "Who was the original owner of the Kyber crystal that became the centerpiece of Kylo Ren’s lightsaber?",
-      options: [
-        "Darth Vader",
-        "Anakin Skywalker",
-        "Luke Skywalker",
-        "Sith artifacts",
-      ],
-      answer: "Sith artifacts",
+        "In Legends, what ancient species created the hyperspace-distorting region known as The Maw?",
+      options: ["Rakata", "Celestials", "Gree", "Kwa"],
+      answer: "Celestials",
+    },
+
+    // Hardcore Questions
+    {
+      question:
+        "What was the name of the Jedi Master who trained Count Dooku before he became a Sith Lord?",
+      options: ["Yoda", "Thame Cerulian", "Sifo-Dyas", "Jocasta Nu"],
+      answer: "Thame Cerulian",
     },
     {
       question:
-        "In Star Wars Legends, who were the first beings to wield the Force?",
-      options: ["The Celestials", "The Old Ones", "The Ones", "The Rakata"],
-      answer: "The Celestials",
+        "In Legends, what Sith Lord’s essence was trapped in a thought bomb on Ruusan, ending the New Sith Wars?",
+      options: ["Darth Bane", "Lord Kaan", "Darth Zannah", "Exar Kun"],
+      answer: "Lord Kaan",
     },
   ];
 
