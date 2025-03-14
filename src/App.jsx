@@ -6,6 +6,8 @@ import babyYoda from "./assets/baby-yoda.webp";
 function App() {
   const [points, setPoints] = useState(0);
 
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+
   const questionsList = [
     // Easy Questions
     {
@@ -96,6 +98,29 @@ function App() {
     //   // return;
     // }
 
+    if (hasSubmitted) {
+      formDataEntries.forEach((entry, index) => {
+        let [question, answer] = entry;
+        let parentElement;
+
+        for (let element of e.target.children) {
+          if (element.querySelector("h2")?.textContent === question) {
+            parentElement = element;
+            break;
+          }
+        }
+
+        parentElement.classList.remove("correct");
+        parentElement.classList.remove("wrong");
+      });
+
+      e.target.reset();
+
+      setHasSubmitted(false);
+    } else {
+      setHasSubmitted(true);
+    }
+
     formDataEntries.forEach((entry, index) => {
       let [question, answer] = entry;
 
@@ -133,7 +158,7 @@ function App() {
         {questionsList.map((question, iterator) => {
           return <Question questionProp={question} key={iterator} />;
         })}
-        <button type="submit">Submit</button>
+        <button type="submit">{!hasSubmitted ? "Submit" : "Clear"}</button>
       </form>
       <button
         className="points-container"
