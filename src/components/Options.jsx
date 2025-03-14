@@ -29,9 +29,11 @@ const Options = ({ options, question }) => {
     <>
       {options.map((option, iterator) => {
         return (
-          <li className="question-list-item" key={iterator}>
-            <div className="">{option}</div>
-            <input type="radio" name={question} value={option} />
+          <li key={iterator}>
+            <label htmlFor={option} className="question-list-item">
+              <div className="">{option}</div>
+              <input type="radio" name={question} value={option} id={option} />
+            </label>
           </li>
         );
       })}
