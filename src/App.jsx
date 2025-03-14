@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Question from "./components/Question";
+import babyYoda from "./assets/baby-yoda.webp";
 
 function App() {
   const [points, setPoints] = useState(0);
@@ -134,9 +135,17 @@ function App() {
         })}
         <button type="submit">Submit</button>
       </form>
-      <h3>
+      <button
+        className="points-container"
+        onClick={() => alert("Why are you clicking me?")}
+      >
         Points: {points} / {questionsList.length}
-      </h3>
+      </button>
+
+      <div className="yoda-top"></div>
+      <div className="yoda"></div>
+      <img src={babyYoda} alt="Baby Yoda" className="yoda-spin-left" />
+      <img src={babyYoda} alt="Baby Yoda" className="yoda-spin" />
     </>
   );
 }
